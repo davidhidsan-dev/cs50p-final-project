@@ -68,7 +68,7 @@ This automation replaces a process that was previously performed entirely by han
 ---
 
 ## Project Structure
-
+```
 project/
 │
 ├── project.py # Main program
@@ -82,7 +82,7 @@ project/
 ├── APR-MAY-JUN.xlsx # 2 quarter 
 ├── JUL-AUG-SEP.xlsx # 3 quarter 
 └── test_project.py
-
+```
 
 ### Quarterly Example Files
 
@@ -99,3 +99,4 @@ The first three quarterly Excel files (JAN-FEB-MAR.xlsx, APR-MAY-JUN.xlsx and JU
 - unicodedata
 
 - os
+
