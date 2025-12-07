@@ -1,6 +1,6 @@
 from project import normalize
 from project import payer_and_concept_match
-from project import fuzzy_name
+from project import detect_name
 from project import extract_payer
 from project import extract_names
 from project import search_approx_patient
@@ -29,12 +29,12 @@ def test_payer_and_concept_match():
     assert ok == True
     assert palabras == []
 
-def test_fuzzy_name():
+def test_detect_name():
     nombres_set = {"maria", "jose", "ana"}
     apellidos_set = {"gomez", "ruiz"}
-    assert fuzzy_name("mari", nombres_set, apellidos_set) == "maria"
-    assert fuzzy_name("gmez", nombres_set, apellidos_set) == "gomez"
-    assert fuzzy_name("qwfs", nombres_set, apellidos_set) == None
+    assert detect_name("mari", nombres_set, apellidos_set) == "maria"
+    assert detect_name("gmez", nombres_set, apellidos_set) == "gomez"
+    assert detect_name("qwfs", nombres_set, apellidos_set) == None
 
 def test_extract_payer():
     original, normalizado, concepto = extract_payer("Transfer from Pedro Gómez, Concept Session")
